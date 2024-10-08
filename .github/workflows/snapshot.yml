@@ -1,0 +1,23 @@
+on:
+  workflow_dispatch:
+
+name: Create Production Snapshot
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: download snapshot
+        run: |
+          rm -rf bin src snapshot.url
+          curl "https://raw.githubusercontent.com/r-multiverse/staging/main/snapshot.url" -Lo snapshot.url
+          cat snapshot.url | xargs curl -Lo snapshot.zip
+          unzip snapshot.zip && rm -f snapshot.zip
+      - name: commit and push
+        run: |
+          git config --global user.name github-actions
+          git config --global user.email actions@github.com
+          git add .
+          git commit -m "R-multiverse Production snapshot ($(date +%F))"
+          git push
