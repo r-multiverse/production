@@ -35,6 +35,7 @@ jobs:
           rm -rf bin src snapshot.url
           curl "https://raw.githubusercontent.com/r-multiverse/staging/main/snapshot.url" -Lo snapshot.url
           cat snapshot.url | xargs curl -Lo snapshot.zip
+          rm snapshot.url
           unzip snapshot.zip && rm -f snapshot.zip
       - name: commit and push
         run: |
