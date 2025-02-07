@@ -50,7 +50,7 @@ jobs:
 
       - name: Record snapshot R version.
         shell: Rscript {0}
-        run: writeLines(rversions::r_release()$version, "version.txt")
+        run: writeLines(rversions::r_release()$version, "r_version.txt")
 
       - name: Download snapshot.
         run: |
