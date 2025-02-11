@@ -1,0 +1,2 @@
+[build]
+  command = "cat snapshot.url | xargs curl -Lo snapshot.zip && unzip snapshot.zip && rm -f snapshot.zip"
