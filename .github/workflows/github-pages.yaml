@@ -28,10 +28,10 @@ on:
     - cron: '0 12 15 8 *'  # August 15 at noon UTC
     - cron: '0 12 15 11 *' # November 15 at noon UTC
 
-name: Create Production Snapshot
+name: Create Production Snapshot (legacy GitHub Pages version)
 
 jobs:
-  snapshot:
+  github-pages:
     runs-on: ubuntu-latest
     steps:
 
