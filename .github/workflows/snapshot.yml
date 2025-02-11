@@ -45,8 +45,11 @@ jobs:
         shell: Rscript {0}
         run: install.packages("rversions")
 
-      - name: Record snapshot date.
+      - name: Record production snapshot date.
         run: date +%F > date.txt
+
+      - name: Record staging freeze date.
+        run: date -d "1 month ago" +"%Y-%m-15" > staging.txt
 
       - name: Record snapshot R version.
         shell: Rscript {0}
