@@ -55,6 +55,9 @@ jobs:
         shell: Rscript {0}
         run: writeLines(rversions::r_release()$version, "r_version.txt")
 
+      - name: Save snapshot JSON.
+        run: curl "https://raw.githubusercontent.com/r-multiverse/staging/main/snapshot.json" -Lo snapshot.json
+
       - name: Save snapshot URL.
         run: curl "https://raw.githubusercontent.com/r-multiverse/staging/main/snapshot.url" -Lo snapshot.url
 
