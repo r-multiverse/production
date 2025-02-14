@@ -59,6 +59,7 @@ jobs:
         run: |
           rm -rf bin src snapshot.url
           curl "https://raw.githubusercontent.com/r-multiverse/staging/main/snapshot.url" -Lo snapshot.url
+          curl "https://raw.githubusercontent.com/r-multiverse/staging/main/snapshot.json" -Lo snapshot.json
           cat snapshot.url | xargs curl -Lo snapshot.zip
           unzip snapshot.zip && rm -f snapshot.zip
 
