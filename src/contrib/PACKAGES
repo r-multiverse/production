@@ -1,42 +1,62 @@
-Package: IMD
-Version: 1.2.1
-License: MIT + file LICENSE
-NeedsCompilation: no
-MD5sum: b9c3f05546db3436b22db77b41ddb920
-Filesize: 4827300
-SHA256: 483ccabc2699216355bd2d7722af675cb07a2f17a8fdc2521804e03cc4fc1e0e
-Depends: R (>= 4.1.0)
-Imports: rlang, dplyr, readr, tibble, janitor
-Suggests: testthat (>= 3.0.0)
+Package: adbcbigquery
+Version: 0.15.0
+License: Apache License (>= 2)
+NeedsCompilation: yes
+MD5sum: 1e42688a51a9527c480f0b48a51bc857
+Filesize: 344167
+SHA256: 127950677e76f112797ba0714f1fec445a51a86658649986affbb3da423b10d5
+Imports: adbcdrivermanager
+Suggests: gargle, nanoarrow, testthat (>= 3.0.0)
+
+Package: adbcdrivermanager
+Version: 0.15.0
+License: Apache License (>= 2)
+NeedsCompilation: yes
+MD5sum: cfed05f1f205a5a81bcc4e03c8ad42fc
+Filesize: 524379
+SHA256: 807c7024b82e790e119aba5287029986886630702813233b218368ef10a87d21
+Imports: nanoarrow (>= 0.3.0)
+Suggests: testthat (>= 3.0.0), withr
+
+Package: adbcflightsql
+Version: 0.15.0
+License: Apache License (>= 2)
+NeedsCompilation: yes
+MD5sum: 3331e73d3e642a92a5960a572cfe6f64
+Filesize: 347055
+SHA256: 141e8b247f307bea4a2379c0ebf581b632b482ced6345671f72a489498e02bef
+Imports: adbcdrivermanager
+Suggests: nanoarrow, testthat (>= 3.0.0)
+
+Package: adbcsnowflake
+Version: 0.15.0
+License: Apache License (>= 2)
+NeedsCompilation: yes
+MD5sum: 1822db0876272bbec18274ef70d241e9
+Filesize: 349663
+SHA256: b7a108d1ae7568cbdf5c2900df31a24044119324a1dda7532552c1d52c6337fd
+Imports: adbcdrivermanager
+Suggests: nanoarrow, openssl, testthat (>= 3.0.0)
 
 Package: arrow
-Version: 17.0.0
+Version: 19.0.0
 License: Apache License (>= 2.0)
 NeedsCompilation: yes
-MD5sum: 06dbfaff2fb296192d9bc85040d16cd7
-Filesize: 4880311
-SHA256: 9f45fc2efc19143026dfff040e3f48054f18a39aa5a95c5aeed0e00704d235db
+MD5sum: dec4934a1d801b62314f0443f78555f3
+Filesize: 4966696
+SHA256: 650f2bd3b300a4206640700bbcd494d6fa1cbf26181812c2d09d04a8afc39cf2
 Depends: R (>= 4.0)
 LinkingTo: cpp11 (>= 0.4.2)
 Imports: assertthat, bit64 (>= 0.9-7), glue, methods, purrr, R6, rlang (>= 1.0.0), stats, tidyselect (>= 1.0.0), utils, vctrs
 Suggests: blob, curl, cli, DBI, dbplyr, decor, distro, dplyr, duckdb (>= 0.2.8), hms, jsonlite, knitr, lubridate, pillar, pkgload, reticulate, rmarkdown, stringi, stringr, sys, testthat (>= 3.1.0), tibble, tzdb, withr
 
-Package: asylum
-Version: 1.1.1
-License: MIT + file LICENSE
-NeedsCompilation: no
-MD5sum: 53ae79860748896521682bc514cc181c
-Filesize: 3441724
-SHA256: 628817a200bbb1c97c223221048fdd433333ef569e8019891c2cf82ac453309c
-Depends: R (>= 2.10)
-
 Package: audio.vadwebrtc
 Version: 0.2
 License: MPL-2.0
 NeedsCompilation: yes
-MD5sum: 73536e7ce8e1aa45215d404db04a77c7
-Filesize: 1015260
-SHA256: bf6556b91ed5513e41dbf9d668f92cfd27a16e92feb20c9615e611019037ea04
+MD5sum: 7f308e9575cb262badefd047175aa279
+Filesize: 1015637
+SHA256: 74ab4f285486b4ef45a5387cdb337019737083d64c7f4e47c612cdd432561014
 Depends: R (>= 2.10)
 LinkingTo: Rcpp, abseil
 Imports: Rcpp (>= 0.11.5), utils
@@ -46,31 +66,31 @@ Package: cmdstanr
 Version: 0.8.1
 License: BSD_3_clause + file LICENSE
 NeedsCompilation: no
-MD5sum: 9535c3525d018157070072ea8e9fe9d5
-Filesize: 863172
-SHA256: 35bff54c5510339d7a2aaaf4da5e06e2cb39aba7546e531af48b27be57f42d6d
+MD5sum: 84f1765aa97b377bbf54f9566e698294
+Filesize: 860939
+SHA256: d95e93a67df40ead8d7f6fc280a1d7791908188e8a406665bd0a2690fcb627d9
 Depends: R (>= 3.5.0)
 Imports: checkmate, data.table, jsonlite (>= 1.2.0), posterior (>= 1.4.1), processx (>= 3.5.0), R6 (>= 2.4.0), withr (>= 2.5.0), rlang (>= 0.4.7)
 Suggests: bayesplot, ggplot2, knitr (>= 1.37), loo (>= 2.0.0), rmarkdown, testthat (>= 2.1.0), Rcpp
 
 Package: crew
-Version: 0.9.5
+Version: 0.10.2
 License: MIT + file LICENSE
 NeedsCompilation: no
-MD5sum: 0aa731b750e8b3790ac5ace17544d94a
-Filesize: 991506
-SHA256: d7e7c36daf987316d186c7fab52f0e9369180276e206b0d9de691677f5e1fd4a
+MD5sum: 914d39a92c0541cc16ea3283718539c5
+Filesize: 1067494
+SHA256: 759a0b0f1221db6940f48289a09ead6eee4701863916c4d4ccfc608373798033
 Depends: R (>= 4.0.0)
-Imports: cli (>= 3.1.0), data.table, getip, later, mirai (>= 0.12.0), nanonext (>= 0.12.0), processx, promises, ps, R6, rlang, stats, tibble, tidyselect, tools, utils
-Suggests: knitr (>= 1.30), markdown (>= 1.1), rmarkdown (>= 2.4), testthat (>= 3.0.0)
+Imports: cli (>= 3.1.0), data.table, getip, later, mirai (>= 1.3.0), nanonext (>= 1.3.0), processx, promises, ps, R6, rlang, stats, tibble, tidyselect, tools, utils
+Suggests: autometric (>= 0.1.0), knitr (>= 1.30), markdown (>= 1.1), rmarkdown (>= 2.4), testthat (>= 3.0.0)
 
 Package: duckdb
-Version: 1.0.0-2
+Version: 1.1.3-1
 License: MIT + file LICENSE
 NeedsCompilation: yes
-MD5sum: 43abe4c990f91421c704962aa9ee6ace
-Filesize: 4421767
-SHA256: 8887dc80801abde1b394969497b11789875e978136219ad69622e5a32f1d334b
+MD5sum: 7281c227fc25bbf37e031f1a6023f970
+Filesize: 3820493
+SHA256: 3c92179caceb0deec0e322908cd00f5554204d39ffedebed702a90b41d49c7c8
 Depends: DBI, R (>= 3.6.0)
 Imports: methods, utils
 Suggests: adbcdrivermanager, arrow (>= 13.0.0), bit64, callr, clock, DBItest, dbplyr, dplyr, rlang, testthat, tibble, vctrs, withr
@@ -79,187 +99,208 @@ Package: httpgd
 Version: 2.0.2
 License: GPL (>= 2)
 NeedsCompilation: yes
-MD5sum: 9b40e277a33a6db71fdca594c415332c
-Filesize: 431258
-SHA256: b0dc80814dc490a4653df92cbd83c6b5591029c702f8c8b09d74818c412fe94d
+MD5sum: 91c08cfa9d7e39b0d8a7e58f85c1f6fc
+Filesize: 435843
+SHA256: 7dbf922325ff5497d05ed9e707a29de2fb9e8a28618fa901b727052db533f457
 Depends: R (>= 3.2.0)
 LinkingTo: unigd, cpp11 (>= 0.2.4), AsioHeaders (>= 1.22.1)
 Imports: unigd
 Suggests: testthat, xml2 (>= 1.0.0), knitr, rmarkdown, covr, future, httr, jsonlite
 
 Package: ichimoku
-Version: 1.5.4
+Version: 1.5.5
 License: GPL (>= 3)
 NeedsCompilation: yes
-MD5sum: 173e6977d287fbd1c780bfa64f6c3285
-Filesize: 1564853
-SHA256: e87149ec0b01ec8b7edba09291d56239a022306f518eb9b658b9220715cd2672
+MD5sum: 79903b5cd2cf4464988c0144bd239f64
+Filesize: 1565723
+SHA256: a95c784dd2b1d72ff90a9b69782d2055063c1c4027d8e7b8ca634969da77c799
 Depends: R (>= 3.5)
-LinkingTo: RcppSimdJson, xts
 Imports: ggplot2 (>= 3.4.0), mirai (>= 1.0.0), nanonext (>= 1.0.0), RcppSimdJson (>= 0.1.9), secretbase (>= 1.0.0), shiny (>= 1.4.0), xts, zoo
 Suggests: keyring, knitr, rmarkdown, testthat (>= 3.0.0)
 
 Package: igraph
-Version: 2.0.2
+Version: 2.1.4
 License: GPL (>= 2)
 NeedsCompilation: yes
-MD5sum: b66718a12d83d27a8eebf7771165edf5
-Filesize: 7224752
-SHA256: b716f39a7cb1865ec4c1f714f5f56d58e9139706e8e206b36d2c71a2c18628f1
+MD5sum: 5a09883b97dfe32bfa2feb5effe38a0b
+Filesize: 7388783
+SHA256: f0e5b2bdd2981dd28799a84763c37be79259730578aeb882836bea5064174b9d
 Depends: methods, R (>= 3.5.0)
-LinkingTo: cpp11 (>= 0.4.7)
+LinkingTo: cpp11 (>= 0.5.0)
 Imports: cli, graphics, grDevices, lifecycle, magrittr, Matrix, pkgconfig (>= 2.0.0), rlang, stats, utils, vctrs
-Suggests: ape (>= 5.7-0.1), callr, decor, digest, graph, igraphdata, knitr, rgl, rmarkdown, scales, stats4, tcltk, testthat, vdiffr, withr
+Suggests: ape (>= 5.7-0.1), callr, decor, digest, igraphdata, knitr, rgl (>= 1.3.14), rmarkdown, scales, stats4, tcltk, testthat, vdiffr, withr
+Enhances: graph
 
-Package: later
-Version: 1.3.2
-License: MIT + file LICENSE
-NeedsCompilation: yes
-MD5sum: 79bc58d62954a5fcfbae81e0eaca706e
-Filesize: 151359
-SHA256: edd5b13f2fb9f68da595e45a6e5a8583673b70a0fb40c47be6a3d16b1a1f5e2f
-LinkingTo: Rcpp
-Imports: Rcpp (>= 0.12.9), rlang
-Suggests: knitr, rmarkdown, testthat (>= 2.1.0)
-
-Package: litedown
-Version: 0.2
+Package: jagstargets
+Version: 1.2.3
 License: MIT + file LICENSE
 NeedsCompilation: no
-MD5sum: f8f6b984988bb115af2ee0053cd4348e
-Filesize: 219120
-SHA256: 5552b96f13eceb42b6e6adb0002367d658ed5dcf2931160009722f43c4fd5468
+MD5sum: fdcd3f7cfe30c2bc030cc25fc255146b
+Filesize: 280948
+SHA256: cb72ae95b4e8d9cc89660f6cd5baf63ae49b5ecedf2ef3b0e152f7299ff42c21
+Depends: R (>= 3.5.0)
+Imports: coda (>= 0.19.4), fst (>= 0.9.2), posterior (>= 1.0.1), purrr (>= 0.3.4), qs2, R2jags (>= 0.6.1), rjags (>= 4.10), rlang (>= 0.4.10), secretbase (>= 0.4.0), stats, targets (>= 1.6.0), tarchetypes (>= 0.8.0), tibble (>= 3.0.1), tidyselect, tools, utils, withr (>= 2.1.2)
+Suggests: dplyr (>= 1.0.2), fs (>= 1.5.0), knitr (>= 1.30), qs (>= 0.23.2), R.utils (>= 2.10.1), rmarkdown (>= 2.3), testthat (>= 3.0.0), tidyr (>= 1.1.2), visNetwork (>= 2.0.9)
+
+Package: later
+Version: 1.4.1
+License: MIT + file LICENSE
+NeedsCompilation: yes
+MD5sum: c6e088dba48ba54c0b155e613ca0c61d
+Filesize: 170843
+SHA256: 1d56dab5cf99f3893f7d32cee7b7ad9c566df64ea404aed871eeeef6e425db3b
+LinkingTo: Rcpp
+Imports: Rcpp (>= 0.12.9), rlang
+Suggests: knitr, nanonext, R6, rmarkdown, testthat (>= 2.1.0)
+
+Package: litedown
+Version: 0.5
+License: MIT + file LICENSE
+NeedsCompilation: no
+MD5sum: f1606d55b2c1db8623fcdb1a8ce3b015
+Filesize: 256850
+SHA256: ab34b8dac006a6779c72e0a7644cb01efcc60b3efd278594d661f08540edaf3e
 Depends: R (>= 3.2.0)
-Imports: utils, commonmark (>= 1.9.1), xfun (>= 0.47)
-Suggests: knitr, rbibutils, rmarkdown (>= 2.18), rstudioapi, tinytex, yaml
+Imports: utils, commonmark (>= 1.9.1), xfun (>= 0.49)
+Suggests: rbibutils, rstudioapi, tinytex
 
 Package: milRex
 Version: 1.1.0
 License: MIT + file LICENSE
 NeedsCompilation: no
-MD5sum: ac2f816bb6bd0873265dc2952c63ba4f
-Filesize: 1329605
-SHA256: 9a865a21ceb6c21f146054ec7015a40c652dcf4318bf3a64812fa99722d17b12
+MD5sum: 15cc20b95870086be8657f575616063a
+Filesize: 1332160
+SHA256: a61c26b1ede47ea9048974e0951bc02c524e5035bad2b354e8d1c65de8eca871
 Depends: R (>= 2.10)
 Imports: base64enc, cachem, dplyr, httr2, janitor, memoise, purrr, readxl, rlang, stringr, tidyr, tidyselect
 Suggests: callr, fs, lubridate, ggplot2, httptest2, knitr, rmarkdown, testthat (>= 3.0.0)
 
 Package: mirai
-Version: 1.2.0
+Version: 2.0.0
 License: GPL (>= 3)
 NeedsCompilation: no
-MD5sum: 430a5dae50e22571cfbd47ae5652d18a
-Filesize: 402537
-SHA256: 449ffe0c931f7a28c496982abf1805914094078eb44f716380a869d697c6962c
+MD5sum: 85e48d682f42dc493f13d5e5eddb4214
+Filesize: 392879
+SHA256: 85ee022b6c67f63815f418827e3006cf83186e81e87a929789827a2004f7b470
 Depends: R (>= 3.6)
-Imports: nanonext (>= 1.2.0)
-Suggests: knitr, markdown
+Imports: nanonext (>= 1.4.0)
+Suggests: cli, litedown
 Enhances: parallel, promises
 
 Package: multitools
 Version: 0.1.1
 License: MIT + file LICENSE
 NeedsCompilation: no
-MD5sum: 080cf900ea583e19ce07b119674137d8
-Filesize: 186999
-SHA256: 1ad44063871695d8721dd8fcacdb9ead17e49928cfcf48ef4084b19f26525db4
+MD5sum: 341988d12157059f40b135cb0dddddd3
+Filesize: 186599
+SHA256: ffd580f7eae52fc879f30d9b32ebed9e24f1d1963d89148c09cacab881fbe0c8
 Depends: R (>= 4.0.0)
 Imports: jsonlite, tibble
 Suggests: curl, knitr (>= 1.30), markdown (>= 1.1), rmarkdown (>= 2.4), testthat (>= 3.0.0)
 
 Package: multiverse.internals
-Version: 0.2.11
+Version: 0.3.5
 License: MIT + file LICENSE
 NeedsCompilation: no
-MD5sum: aa6bbded0ce269942ad045b2e708afdb
-Filesize: 162224
-SHA256: 1602ede633137582ffa3b3fa8645527dc02ad3c2be96d83b9d3351887beba91b
-Depends: R (>= 3.6)
-Imports: gh, igraph, jsonlite, nanonext, pkgsearch, utils, vctrs
+MD5sum: e042ab32b73f829d9b3da527465da311
+Filesize: 181305
+SHA256: 0dc769ea71c042e3e616f70a657e97e0eae4fbc173d63a9153d8d343ab0be582
+Depends: R (>= 4.4.0)
+Imports: base64enc, desc, gh, igraph, jsonlite, nanonext, pkgsearch, rversions, stats, utils, vctrs, yaml
 Suggests: gert, testthat (>= 3.0.0)
 
+Package: nanoarrow
+Version: 0.6.0
+License: Apache License (>= 2)
+NeedsCompilation: yes
+MD5sum: 4658839005d6aeb3a0972293e6e65b2b
+Filesize: 580994
+SHA256: 14e64fbb53358393f0f3337332673d318fee411d983ac98def3d1c5d9332486d
+Suggests: arrow (>= 9.0.0), bit64, blob, hms, jsonlite, rlang, testthat (>= 3.0.0), tibble, vctrs, withr
+
 Package: nanonext
-Version: 1.2.1
+Version: 1.4.0
 License: GPL (>= 3)
 NeedsCompilation: yes
-MD5sum: 02852c38a458af08d964d01b522047e3
-Filesize: 1072727
-SHA256: d2751811ef7999130576e6bdfcd0f77a4cba302dc7377cf4e9f1fcbe780de2ba
+MD5sum: 94dbfa787a814ea56fe7d8c9a772e092
+Filesize: 1078316
+SHA256: b68d6766d43e024811766fe931d2e55ebcf83785eae143e2699080fb10b949a5
 Depends: R (>= 3.6)
-Suggests: knitr, later, markdown
+Suggests: later, litedown
 Enhances: promises
 
 Package: polars
-Version: 0.20.0
+Version: 0.22.1
 License: MIT + file LICENSE
 NeedsCompilation: yes
-MD5sum: 08ad9c6ef39a74015d925ad7ba1063e0
-Filesize: 2071448
-SHA256: 3b34d3facf109065ba8e71925ece7429aaee91791d7abc8a4eb16ced103e9265
+MD5sum: 4ce640abc6b09876a87bfbfafff67821
+Filesize: 2073308
+SHA256: 6c130576af99796ce0fff68cde5b1939b76964ab1cf859634e65dd68f5d8fbb9
 Depends: R (>= 4.2)
 Imports: utils, codetools, methods
-Suggests: arrow (>= 15.0.1), bench, bit64, callr, clock (>= 0.7.0), curl, ggplot2, jsonlite, knitr, lubridate, nanoarrow (>= 0.6.0), nycflights13, patrick, pillar, rlang, rmarkdown, testthat (>= 3.2.1), tibble, tools, vctrs, withr
+Suggests: arrow (>= 15.0.1), bench, bit64, callr, clock (>= 0.7.0), curl, ggplot2, jsonlite, knitr (>= 1.49.0), lubridate, nanoarrow (>= 0.6.0), nycflights13, patrick (>= 0.3.0), quickcheck, pillar, rlang, rmarkdown, testthat (>= 3.2.1), tibble, tools, vctrs, withr, xfun (>= 0.48)
 
 Package: prophet
 Version: 1.1.6
 License: MIT + file LICENSE
 NeedsCompilation: yes
-MD5sum: e5c1d56c7f046f70ab8c1b4115e1e213
-Filesize: 512240
-SHA256: 4aec92d1e9f012fdc956e927d4ffa75463038b647ed536168ed6acdf0ac983b3
+MD5sum: 8a0da9900e5885d47ede96b83921c33c
+Filesize: 516347
+SHA256: 7668b6c46034434127e49c19c1a35f787b4a15fc232cce9214fe559bc91e3bef
 Depends: R (>= 3.4.0), Rcpp (>= 0.12.0), rlang (>= 0.3.0.1)
 LinkingTo: BH (>= 1.66.0), Rcpp (>= 0.12.0), RcppParallel (>= 5.0.1), RcppEigen (>= 0.3.3.3.0), rstan (>= 2.18.1), StanHeaders (>= 2.18.0)
 Imports: dplyr (>= 0.7.7), dygraphs (>= 1.1.1.4), extraDistr, ggplot2, grid, lubridate, methods, RcppParallel (>= 5.0.1), rstan (>= 2.18.1), rstantools (>= 2.0.0), scales, StanHeaders, stats, tidyr (>= 0.6.1), xts
 Suggests: cmdstanr, posterior, knitr, testthat, readr, rmarkdown
 
 Package: prqlr
-Version: 0.9.0
+Version: 0.10.0
 License: MIT + file LICENSE
 NeedsCompilation: yes
-MD5sum: 6020f36f9cfe4f2ad0089542f1eacda0
-Filesize: 192710
-SHA256: 0b27df8db639effc06201af72cebd41ab117cceced88ab68b372cad546aebada
+MD5sum: bad100c4c8da94c0d522b4a399dfe4b1
+Filesize: 196026
+SHA256: e4484e4ec2128084f1af1b85ccfdddae0db1687350b8a65d04452467c14d659d
 Depends: R (>= 4.2)
-Suggests: knitr (>= 1.44), rmarkdown, DBI, glue, RSQLite, tidyquery, sqldf, nycflights13, dplyr, testthat (>= 3.2.0), patrick, withr
+Suggests: knitr (>= 1.44), rmarkdown, DBI, glue, RSQLite, tidyquery, sqldf, nycflights13, dplyr, testthat (>= 3.2.0), patrick (>= 0.3.0), withr, cli
 
 Package: rJavaEnv
-Version: 0.0.1
+Version: 0.2.2
 License: MIT + file LICENSE
 NeedsCompilation: no
-MD5sum: 60e12a4eb4d485d99e927d0416f6e2ac
-Filesize: 396448
-SHA256: 72848551fcd04cd9d33ed4f7eab454d619a98f6eec07fec0eea5539c8ce8887d
+MD5sum: 03c81883ea6f60aa9010beedefa0c3ef
+Filesize: 256626
+SHA256: 31056147fdbdd15eb58090b30919f4e41dbc4d377dadcac45a2648d18c1ab979
+Depends: R (>= 4.0)
 Imports: checkmate, cli, curl, jsonlite, utils
-Suggests: knitr, rmarkdown, rJava, testthat (>= 3.0.0)
+Suggests: quarto, rJava, testthat (>= 3.0.0)
 
 Package: rlang
 Version: 1.1.4
 License: MIT + file LICENSE
 NeedsCompilation: yes
-MD5sum: 03285059a5cdad6e9c70e79fa21e03ae
-Filesize: 1360781
-SHA256: 906a03f4d5997df5d2f798ac3162d383b14936869d89d5e99faec3c3e29cc7ee
+MD5sum: e6de20d5c61384b9d2840cf95cd3d05d
+Filesize: 1359296
+SHA256: 84ede5eef7da30ec1ef5ad6472832d3c99699b7dfb87cb4eb88d182024ceb300
 Depends: R (>= 3.5.0)
 Imports: utils
 Suggests: cli (>= 3.1.0), covr, crayon, fs, glue, knitr, magrittr, methods, pillar, rmarkdown, stats, testthat (>= 3.0.0), tibble, usethis, vctrs (>= 0.2.3), withr
 Enhances: winch
 
 Package: secretbase
-Version: 1.0.1
+Version: 1.0.3
 License: GPL (>= 3)
 NeedsCompilation: yes
-MD5sum: b1b81726be8e161e136774a331721ba2
-Filesize: 130685
-SHA256: 7aa26a9b3f03b9f04c06011855c89658f7cc74f8244fa064cb16810e32e91941
+MD5sum: 32e3c69a8d399ee427dcf51dc58c6f0f
+Filesize: 132477
+SHA256: 48e0f25ccd10181ed67507f2aae45630174846fd1c82a490697baddd9ee67b02
 Depends: R (>= 3.5)
 
 Package: string2path
-Version: 0.1.7
+Version: 0.1.8
 License: MIT + file LICENSE
 NeedsCompilation: yes
-MD5sum: 6d56b8e488607be91f40cdcc87004d35
-Filesize: 1691556
-SHA256: 869e821c74f635b131e245e03a9bc0114221f0c45577237b010f7d46f7f28059
+MD5sum: 405458186a4ec2af6ce0cb6b09a40966
+Filesize: 1693659
+SHA256: 0a105dd3ff3a776bd11d16b502f118ddde8faa45141326d0c060649be9153994
 Depends: R (>= 4.2)
 Imports: tibble, cli
 Suggests: testthat (>= 3.0.0)
@@ -268,54 +309,54 @@ Package: targetsketch
 Version: 0.0.1
 License: MIT + file LICENSE
 NeedsCompilation: no
-MD5sum: f16801fd2bfa267d879d3baaada78c04
-Filesize: 79404
-SHA256: a3c823cfff329d5446d3a04dee6c5461fbf5446ce3dcedeedcd2634301850fee
+MD5sum: 445c73eb848e3677302c4996ec1898b3
+Filesize: 81295
+SHA256: 0210e0e1564fe3ae485df7c23eafd562aecef21ac3dbbe0311413f13b9f23334
 Depends: R (>= 4.1.0)
 Imports: bs4Dash (>= 2.0.0), DT (>= 0.14), htmltools (>= 0.5.0), markdown, rclipboard, shiny (>= 1.5.0), shinyalert (>= 1.1), shinyAce (>= 0.4.1), shinybusy (>= 0.2.0), shinycssloaders (>= 0.3), shinyFiles (>= 0.9.3), targets (>= 0.2.0), tarchetypes (>= 0.1.0), visNetwork (>= 2.0.9), withr (>= 2.2.0)
 Suggests: pkgload (>= 1.1.0), rmarkdown (>= 2.3)
 
 Package: tidypolars
-Version: 0.11.0
+Version: 0.12.0
 License: MIT + file LICENSE
 NeedsCompilation: no
-MD5sum: 4c89fb213f6d3d2a94100dca2c1883ff
-Filesize: 958617
-SHA256: 087fafc23bbe3d169c53d47bc93e7a9ff7be19b4513b848c42a1ecc869d1f367
+MD5sum: d77d703d4747d8a11f4e4a0540b1c04b
+Filesize: 961021
+SHA256: 5f4949cb4a23dfd3683662d4a1cbaf4b45968390a1f328d5f9d3e1d7a7d051fb
 Depends: R (>= 4.1.0)
-Imports: dplyr, glue, lifecycle, polars (>= 0.20.0), rlang, tidyr, tidyselect, utils, vctrs
+Imports: dplyr, glue, lifecycle, polars (>= 0.21.0), rlang, tidyr, tidyselect, utils, vctrs
 Suggests: arrow, bench, data.table, knitr, jsonlite, lubridate, nanoparquet, patrick, quickcheck, rmarkdown, rstudioapi, stringr, testthat (>= 3.0.0), tibble, withr
 
 Package: unigd
 Version: 0.1.2
 License: GPL (>= 2)
 NeedsCompilation: yes
-MD5sum: 6034d4f4dada6ad231a62d5b5a6268d4
-Filesize: 905138
-SHA256: a6405683faffc214a0751cc79bb653deef250c85acd69e00a14102fa7fc37a6a
+MD5sum: 2940f71c615e2e9b1929b8bb9d9bf9d0
+Filesize: 908556
+SHA256: 32b84d039484d4b8a28c379a79341cd0e09b22c66e6fd06d07d6108cfb4f3659
 Depends: R (>= 3.2.0)
 LinkingTo: cpp11 (>= 0.2.4), systemfonts
 Imports: systemfonts (>= 1.0.0)
 Suggests: testthat (>= 3.0.0), xml2 (>= 1.0.0), fontquiver (>= 0.2.0), covr, knitr, rmarkdown
 
-Package: webseq
-Version: 0.1
+Package: webchem
+Version: 1.3.0
 License: MIT + file LICENSE
 NeedsCompilation: no
-MD5sum: bac1d3913bb746aa2267f44dc8da7937
-Filesize: 161899
-SHA256: 7219239e73214d75f05f5fe167114b409e8291cbcabf82cb1f1630440a295fa3
-Depends: R (>= 3.5.0)
-Imports: curl, dplyr, httr, jsonlite, plyr, rentrez, stringi, stringr, tibble, tidyr, XML, xml2
-Suggests: knitr, rmarkdown, testthat
+MD5sum: aecef30cb7c9225fc4cbeabc00a60b69
+Filesize: 389118
+SHA256: 27b8560925a695b42a6e38de12750e13c87cc73f3cf64d5fb5f2b91c35a783ef
+Depends: R (>= 3.0)
+Imports: xml2, httr, rvest, jsonlite, stringr, methods, dplyr, purrr, data.tree, tibble, base64enc, rlang, utils
+Suggests: testthat, rcdk, covr, robotstxt, knitr, rmarkdown, plot.matrix, usethis, vcr
 
 Package: zstdlite
 Version: 0.2.6
 License: MIT + file LICENSE
 NeedsCompilation: yes
-MD5sum: 788d1171661d9e27543eaea2003b593b
-Filesize: 764382
-SHA256: b3741d04ac1fd49ea5cc27b19b6d1c10254dafab86b7259c069a0ef4982f9f85
+MD5sum: 3a5833b7e596d83c6f60c6dc37993444
+Filesize: 767208
+SHA256: 6eb983a21cdecd8e1cb0a30350c8817eabf2a7df16818e2088ef21c283736143
 Depends: R (>= 3.4.0)
 Suggests: knitr, rmarkdown, testthat, bench
 
