@@ -23,10 +23,10 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 12 15 2 *'  # February 15 at noon UTC
-    - cron: '0 12 15 5 *'  # May 15 at noon UTC
-    - cron: '0 12 15 8 *'  # August 15 at noon UTC
-    - cron: '0 12 15 11 *' # November 15 at noon UTC
+    - cron: '0 12 15 3 *'  # March 15 at noon UTC
+    - cron: '0 12 15 6 *'  # June 15 at noon UTC
+    - cron: '0 12 15 9 *'  # September 15 at noon UTC
+    - cron: '0 12 15 12 *' # December 15 at noon UTC
 
 name: Create Production Snapshot (legacy GitHub Pages version)
 
@@ -35,38 +35,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - uses: actions/checkout@v4
+      - name: Fetch the latest commit of the Production repository.
+        uses: actions/checkout@v4
 
-      - uses: r-lib/actions/setup-r@v2
+      - name: Clone Staging universe.
+        uses: actions/checkout@v4
         with:
-          use-public-rspm: true
+          repository: '${{ github.repository_owner }}/staging'
+          path: 'staging'
 
-      - name: Install rversions.
-        shell: Rscript {0}
-        run: install.packages("rversions")
-
-      - name: Record production snapshot date.
-        run: date +%F > date.txt
-
-      - name: Record staging freeze date.
-        run: date -d "1 month ago" +"%Y-%m-15" > staging.txt
-
-      - name: Record snapshot R version.
-        shell: Rscript {0}
-        run: writeLines(rversions::r_release()$version, "r_version.txt")
+      - name: Copy important files from Staging.
+        run: |
+          cp staging/*.txt .
+          cp staging/snapshot.* .
+      
+      - name: Remove local copy of Staging.
+        run: rm -rf staging
 
       - name: Download snapshot.
         run: |
-          rm -rf bin src snapshot.url
-          curl "https://raw.githubusercontent.com/r-multiverse/staging/main/snapshot.url" -Lo snapshot.url
-          curl "https://raw.githubusercontent.com/r-multiverse/staging/main/snapshot.json" -Lo snapshot.json
           cat snapshot.url | xargs curl -Lo snapshot.zip
           unzip snapshot.zip && rm -f snapshot.zip
 
-      - name: Commit and push.
-        run: |
-          git config --global user.name github-actions
-          git config --global user.email actions@github.com
-          git add .
-          git commit -m "R-multiverse Production snapshot ($(date +%F))"
-          git push
+      - name: Push to the gh-pages branch.
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          clean: false
+          branch: gh-pages
+          folder: .
