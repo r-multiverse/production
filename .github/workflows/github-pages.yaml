@@ -57,10 +57,10 @@ jobs:
           cat snapshot.url | xargs curl -Lo snapshot.zip
           unzip snapshot.zip && rm -f snapshot.zip
 
-      - name: Commit and push.
-        run: |
-          git config --global user.name github-actions
-          git config --global user.email actions@github.com
-          git add .
-          git commit -m "R-multiverse Production snapshot ($(date +%F))"
-          git push
+      - name: Push to the gh-pages branch.
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          clean: false
+          branch: gh-pages
+          folder: .
